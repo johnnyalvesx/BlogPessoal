@@ -1,0 +1,33 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BLOG PESSOAL - tb_tema",
+		"_postman_id": "51e0c52e-baed-19b0-2870-1e75fba3de23",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 - Consultar todos os temas",
+			"request": {
+				"url": "http://localhost:8080/tema",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2 - Consultar tema por ID",
+			"request": {
+				"url": "http://localhost:8080/tema/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

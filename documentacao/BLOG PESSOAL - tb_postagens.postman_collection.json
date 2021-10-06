@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BLOG PESSOAL - tb_postagens",
+		"_postman_id": "c784c785-ca77-e985-a82a-4d9c4f7b88fe",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 - Consultar todas as postagens",
+			"request": {
+				"url": "http://localhost:8080/postagens/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "findAll()"
+			},
+			"response": []
+		},
+		{
+			"name": "2 - Consultar postagem por ID",
+			"request": {
+				"url": "http://localhost:8080/postagens/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "findById(id)"
+			},
+			"response": []
+		},
+		{
+			"name": "3 - Consultar postagem por título",
+			"request": {
+				"url": "http://localhost:8080/postagens/titulo/postagem",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "findByTituloContainingIgnoreCase(titulo)"
+			},
+			"response": []
+		},
+		{
+			"name": "4 - Cadastrar postagem",
+			"request": {
+				"url": "http://localhost:8080/postagens/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"titulo\": \"Postagem 01\",\n\t\"texto\": \"Texto da Postagem 01\",\n\t\"tema\": {\n\t\t\"id\": 1\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "5 - Editar postagem",
+			"request": {
+				"url": "http://localhost:8080/postagens/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"titulo\": \"Minha Postagem\",\n\t\"texto\": \"Texto Atualizado\",\n\t\"tema\": {\n\t\t\"id\": 1\n\t}\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "6 - Deletar postagem",
+			"request": {
+				"url": "http://localhost:8080/postagens/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
