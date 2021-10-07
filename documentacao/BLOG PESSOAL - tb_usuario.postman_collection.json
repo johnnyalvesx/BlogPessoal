@@ -1,7 +1,7 @@
 {
 	"variables": [],
 	"info": {
-		"name": "BLOG PESSOAL - tb_usuarios",
+		"name": "BLOG PESSOAL - tb_usuario",
 		"_postman_id": "13f54823-1c9d-4531-f70a-f354f70c6d8c",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -41,7 +41,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"usuario\": \"tsuki\",\n\t\"senha\": \"123456789\"\n\t\n}"
+					"raw": "{\n\t\"usuario\": \"\",\n\t\"senha\": \"\"\n\t\n}"
 				},
 				"description": ""
 			},

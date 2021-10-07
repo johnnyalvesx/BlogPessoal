@@ -12,7 +12,13 @@
 			"request": {
 				"url": "http://localhost:8080/tema",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
@@ -21,10 +27,108 @@
 		{
 			"name": "2 - Consultar tema por ID",
 			"request": {
-				"url": "http://localhost:8080/tema/1",
+				"url": "http://localhost:8080/tema/{id do tema}",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3 - Consultar tema por nome",
+			"request": {
+				"url": "http://localhost:8080/tema/nome/{nome do tema}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4 - Cadastrar tema",
+			"request": {
+				"url": "http://localhost:8080/tema",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"descricao\": \"Games\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "5 - Editar tema",
+			"request": {
+				"url": "http://localhost:8080/tema",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"\",\n\t\"descricao\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "6 - Deletar tema",
+			"request": {
+				"url": "http://localhost:8080/tema/{id do tema}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"description": ""
 			},
 			"response": []

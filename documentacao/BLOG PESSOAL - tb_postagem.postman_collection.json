@@ -1,7 +1,7 @@
 {
 	"variables": [],
 	"info": {
-		"name": "BLOG PESSOAL - tb_postagens",
+		"name": "BLOG PESSOAL - tb_postagem",
 		"_postman_id": "c784c785-ca77-e985-a82a-4d9c4f7b88fe",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -12,7 +12,13 @@
 			"request": {
 				"url": "http://localhost:8080/postagens/",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": "findAll()"
 			},
@@ -21,9 +27,15 @@
 		{
 			"name": "2 - Consultar postagem por ID",
 			"request": {
-				"url": "http://localhost:8080/postagens/1",
+				"url": "http://localhost:8080/postagens/{id da postagem}",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": "findById(id)"
 			},
@@ -32,9 +44,15 @@
 		{
 			"name": "3 - Consultar postagem por título",
 			"request": {
-				"url": "http://localhost:8080/postagens/titulo/postagem",
+				"url": "http://localhost:8080/postagens/titulo/{titulo da postagem}",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": "findByTituloContainingIgnoreCase(titulo)"
 			},
@@ -50,11 +68,16 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"titulo\": \"Postagem 01\",\n\t\"texto\": \"Texto da Postagem 01\",\n\t\"tema\": {\n\t\t\"id\": 1\n\t}\n}"
+					"raw": "{\n\t\"titulo\": \"\",\n\t\"texto\": \"\",\n\t\"tema\": {\n\t\t\"id\": \"\"\n\t}\n}"
 				},
 				"description": ""
 			},
@@ -70,6 +93,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
 					}
 				],
 				"body": {
@@ -83,12 +111,17 @@
 		{
 			"name": "6 - Deletar postagem",
 			"request": {
-				"url": "http://localhost:8080/postagens/1",
+				"url": "http://localhost:8080/postagens/{id da postagem}",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
 						"description": ""
 					}
 				],
