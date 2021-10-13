@@ -1,16 +1,16 @@
 {
 	"variables": [],
 	"info": {
-		"name": "BLOG PESSOAL - tb_tema",
-		"_postman_id": "51e0c52e-baed-19b0-2870-1e75fba3de23",
+		"name": "BLOG PESSOAL - Requisicoes - postagens",
+		"_postman_id": "c784c785-ca77-e985-a82a-4d9c4f7b88fe",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "1 - Consultar todos os temas",
+			"name": "1 - Consultar todas as postagens",
 			"request": {
-				"url": "http://localhost:8080/tema",
+				"url": "http://localhost:8080/postagens/",
 				"method": "GET",
 				"header": [
 					{
@@ -20,14 +20,14 @@
 					}
 				],
 				"body": {},
-				"description": ""
+				"description": "findAll()"
 			},
 			"response": []
 		},
 		{
-			"name": "2 - Consultar tema por ID",
+			"name": "2 - Consultar postagem por ID",
 			"request": {
-				"url": "http://localhost:8080/tema/{id do tema}",
+				"url": "http://localhost:8080/postagens/{id da postagem}",
 				"method": "GET",
 				"header": [
 					{
@@ -37,14 +37,14 @@
 					}
 				],
 				"body": {},
-				"description": ""
+				"description": "findById(id)"
 			},
 			"response": []
 		},
 		{
-			"name": "3 - Consultar tema por nome",
+			"name": "3 - Consultar postagem por título",
 			"request": {
-				"url": "http://localhost:8080/tema/nome/{nome do tema}",
+				"url": "http://localhost:8080/postagens/titulo/{titulo da postagem}",
 				"method": "GET",
 				"header": [
 					{
@@ -54,14 +54,14 @@
 					}
 				],
 				"body": {},
-				"description": ""
+				"description": "findByTituloContainingIgnoreCase(titulo)"
 			},
 			"response": []
 		},
 		{
-			"name": "4 - Cadastrar tema",
+			"name": "4 - Cadastrar postagem",
 			"request": {
-				"url": "http://localhost:8080/tema",
+				"url": "http://localhost:8080/postagens/",
 				"method": "POST",
 				"header": [
 					{
@@ -77,16 +77,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"descricao\": \"Games\"\n}"
+					"raw": "{\n\t\"titulo\": \"\",\n\t\"texto\": \"\",\n\t\"tema\": {\n\t\t\"id\": \"\"\n\t}\n}"
 				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "5 - Editar tema",
+			"name": "5 - Editar postagem",
 			"request": {
-				"url": "http://localhost:8080/tema",
+				"url": "http://localhost:8080/postagens/",
 				"method": "PUT",
 				"header": [
 					{
@@ -102,16 +102,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": \"\",\n\t\"descricao\": \"\"\n}"
+					"raw": "{\n\t\"id\": \"1\",\n\t\"titulo\": \"Minha Postagem\",\n\t\"texto\": \"Texto Atualizado\",\n\t\"tema\": {\n\t\t\"id\": 1\n\t}\n}\n"
 				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "6 - Deletar tema",
+			"name": "6 - Deletar postagem",
 			"request": {
-				"url": "http://localhost:8080/tema/{id do tema}",
+				"url": "http://localhost:8080/postagens/{id da postagem}",
 				"method": "DELETE",
 				"header": [
 					{

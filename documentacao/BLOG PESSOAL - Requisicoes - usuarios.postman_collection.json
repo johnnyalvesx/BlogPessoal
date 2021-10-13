@@ -1,0 +1,109 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BLOG PESSOAL - Requisicoes - usuarios",
+		"_postman_id": "13f54823-1c9d-4531-f70a-f354f70c6d8c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar usuário",
+			"request": {
+				"url": "http://localhost:8080/usuarios/cadastrar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"\",\n\t\"usuario\": \"\",\n\t\"dataNascimento\":\"\",\n\t\"senha\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logar usuário",
+			"request": {
+				"url": "http://localhost:8080/usuarios/logar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"usuario\": \"\",\n\t\"senha\":\"\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar usuário",
+			"request": {
+				"url": "http://localhost:8080/usuarios/atualizar",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"\",\n\t\"nome\": \"\",\n\t\"usuario\": \"\",\n\t\"dataNascimento\":\"\",\n\t\"senha\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os usuários",
+			"request": {
+				"url": "http://localhost:8080/usuarios/all",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"\",\n\t\"nome\": \"\",\n\t\"usuario\": \"\",\n\t\"dataNascimento\":\"\",\n\t\"senha\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
