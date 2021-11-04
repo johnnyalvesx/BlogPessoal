@@ -38,21 +38,25 @@ public class Usuario {
 	@NotBlank(message = "O atributo usuário não pode ser vazio")
 	@Email(message = "O atributo usuário deve ser um email")
 	private String usuario;
-	
+
 	@NotNull(message = "O atributo senha é obrigatório")
-	@Size(min = 8, message = "O atributo senha deve ter no mínimo 8 caracteres")
+	@Size(min = 5, message = "O atributo senha deve ter no mínimo 5 caracteres")
 	private String senha;
-	
+
+	private String foto;
+
+	private String tipo;
+
 	@Column(name = "dt_nascimento")
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataNascimento;
-	
+
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 
 // Primeiro método Construtor - Com os atributos
-	public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
+	public Usuario(long id, String nome, String usuario, String senha,  LocalDate dataNascimento) {
 		this.id = id;
 		this.nome = nome;
 		this.usuario = usuario;
@@ -101,7 +105,23 @@ public class Usuario {
 	}
 
 	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
+		this.dataNascimento = dataNascimento; 
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public List<Postagem> getPostagem() {
@@ -111,4 +131,5 @@ public class Usuario {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+
 }
